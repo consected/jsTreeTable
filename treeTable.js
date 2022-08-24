@@ -219,8 +219,9 @@ var com_github_culmat_jsTreeTable =  (function(){
 					ctr.trCollapse()
 				})
 			}
-			$(tr).click(function() {
-				this.trChildrenVisible ? this.trCollapse(true) : this.trExpand(true)
+			$(td).click(function() {
+				var tr = $(this).parent()[0];
+				tr.trChildrenVisible ? tr.trCollapse(true) : tr.trExpand(true)
 			})
 		})
 		return table
